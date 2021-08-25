@@ -81,7 +81,7 @@ class ViewControllerDataSource {
 
     private func applyFilteringIfNeeded(_ input: [CompileMeasure]) -> [CompileMeasure] {
         guard !filter.isEmpty else { return input }
-        return input.filter{ textContains($0.code, pattern: filter) || textContains($0.filename, pattern: filter) }
+        return input.filter{ textContains($0.code, pattern: filter) || textContains($0.path, pattern: filter) }
     }
 
     private func textContains(_ text: String, pattern: String) -> Bool {

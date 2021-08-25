@@ -21,7 +21,7 @@ import Foundation
     }
 
     var fileAndLine: String {
-        return "\(filename):\(locationArray[0])"
+        return "\(path):\(locationArray[0])"
     }
 
     var fileInfo: String {
